@@ -25,9 +25,9 @@
 
     <div class="row">
         <form class="col s12">
-            <a class="waves-effect waves-light btn">logout</a>
-            <a class="waves-effect waves-light btn">modify</a>
-            <a class="waves-effect waves-light btn">login</a>
+            <a class="waves-effect waves-light btn logout">logout</a>
+            <a class="waves-effect waves-light btn modify">modify</a>
+            <a class="waves-effect waves-light btn login">login</a>
         </form>
     </div>
 
@@ -65,20 +65,19 @@
             };
             var mp = document.createElement('script');
             mp.type = 'text/javascript';
-            mp.async = true;
+            mp.async = false;
             mp.src = './../testapp/mparticle-sdk-javascript-private/mparticle.js'
 
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(mp, s);
-
-        //     // // **********AFTERLOADING SCRIPTS (configureForwarder & init) **********//
-        //     var afterLoadingScripts = document.createElement('script');
-        //     afterLoadingScripts.type = 'text/javascript';
-        //     afterLoadingScripts.async = false;
-        //     afterLoadingScripts.src = ('afterLoadingScripts.js');
+            // // **********AFTERLOADING SCRIPTS (configureForwarder & init) **********//
+            var afterLoadingScripts = document.createElement('script');
+            afterLoadingScripts.type = 'text/javascript';
+            afterLoadingScripts.async = false;
+            afterLoadingScripts.src = ('init.js');
         //
-        //     var s = document.getElementsByTagName('script')[0];
-        //     s.parentNode.insertBefore(afterLoadingScripts, s);
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(afterLoadingScripts, s);
         // // })('e001b2b2eb5da649a42c633563135de1');
     })();
 
