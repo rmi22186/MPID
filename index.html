@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Identity Test App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="User Identity Type" id="userIdentityType" type="text" class="validate">
+              <label for="userIdentityType">User Identity Type</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="User Identity Value" id="userIdentityValue" type="text" class="validate">
+              <label for="userIdentityValue">User Identity Value</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    <div class="row">
+        <form class="col s12">
+            <a class="waves-effect waves-light btn">logout</a>
+            <a class="waves-effect waves-light btn">modify</a>
+            <a class="waves-effect waves-light btn">login</a>
+        </form>
+    </div>
+
+    <div class="row">
+        <form class="col s12">
+            <a class="waves-effect blue btn">Clear Cookies</a>
+            <a class="waves-effect blue btn">Reset</a>
+            <a class="waves-effect blue btn">Initialize</a>
+        </form>
+    </div>
+    <hr>
+    <div class="result">
+        <h3> Results</h3>
+        <div class="row">
+            <form class="col s12">
+                <a class="waves-effect red btn">Clear results</a>
+            </form>
+        </div>
+    </div>
+
+</body>
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script type="text/javascript">
+          window.mParticle = {
+              config: {
+                isDevelopmentMode: true,
+              }
+          };
+          (function (apiKey) {
+            window.mParticle = window.mParticle || {};
+            window.mParticle.config = window.mParticle.config || {};
+            window.mParticle.config.rq = [];
+            window.mParticle.ready = function (f) {
+                window.mParticle.config.rq.push(f);
+            };
+            var mp = document.createElement('script');
+            mp.type = 'text/javascript';
+            mp.async = true;
+            mp.src = './../testapp/mparticle-sdk-javascript-private/mparticle.js'
+
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(mp, s);
+
+        //     // // **********AFTERLOADING SCRIPTS (configureForwarder & init) **********//
+        //     var afterLoadingScripts = document.createElement('script');
+        //     afterLoadingScripts.type = 'text/javascript';
+        //     afterLoadingScripts.async = false;
+        //     afterLoadingScripts.src = ('afterLoadingScripts.js');
+        //
+        //     var s = document.getElementsByTagName('script')[0];
+        //     s.parentNode.insertBefore(afterLoadingScripts, s);
+        // // })('e001b2b2eb5da649a42c633563135de1');
+    })();
+
+  </script>
+  <script type="text/javascript" src="scripts.js"></script>
+</html>
