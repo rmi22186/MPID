@@ -1,0 +1,17 @@
+{
+  "name": "mparticle-sdk-javascript",
+  "version": "1.14.1",
+  "description": "mParticle core Javascript SDK",
+  "repository": "https://github.com/mParticle/mparticle-sdk-javascript",
+  "scripts": {
+    "test": "node test/runner.js",
+    "lint": "eslint mparticle.js test/tests.js"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
